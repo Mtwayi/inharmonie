@@ -1,0 +1,42 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "stellar.js": {
+      "files": [
+        "scripts/stellar.js"
+      ]
+    },
+    "SmoothScroll.js": {
+      "files": [
+        "scripts/SmoothScroll.js"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "slick.js": {
+      "files": [
+        "scripts/slick.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "http://localhost/inharmonie/"
+  }
+}

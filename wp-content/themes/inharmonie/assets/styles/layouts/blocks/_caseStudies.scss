@@ -1,0 +1,199 @@
+/* Case Studies */
+#hp-case-studies {
+	.full-container {
+		overflow: hidden;
+		> div {
+			// background-position: bottom center !important;
+			height: 742px;
+			-webkit-transition: all 0.4s ease-in;
+  			transition: all 0.4s ease-in;
+  			overflow: hidden;
+  			@media (max-width: 543px) {
+  				height: auto;
+  			}
+  			&.col-sm-6 {
+  				z-index: 2;
+  			}
+  			&.col-sm-3.col_2 {
+  				transition: all .5s;
+  				&:hover {
+	  				// filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /><feGaussianBlur stdDeviation="3" /></filter></svg>#filter');
+				  	// filter: grayscale(1) blur(3px);
+				  	// -webkit-filter: grayscale(1) blur(3px);
+
+				  	-ms-transform: scale(1.2);
+				    -moz-transform: scale(1.2);
+				    -webkit-transform: scale(1.2);
+				    -o-transform: scale(1.2);
+				    transform: scale(1.2);
+	  			}
+  			}
+  			&.col-sm-3.col_3 {
+  				transition: all .5s;
+  				.row {
+  					transition: all .5s;
+					&:hover {
+						-ms-transform: scale(1.4);
+					    -moz-transform: scale(1.4);
+					    -webkit-transform: scale(1.4);
+					    -o-transform: scale(1.4);
+					    transform: scale(1.4);
+					}
+  				}
+  			}
+			.content {
+				float: right;
+				text-align: right;
+			    padding: 5em 5em 5em 0em;
+			    max-width: 400px;
+				h1 {
+					color: $brand-white;
+					margin-bottom: 0rem;
+				}
+				p {
+					color: $brand-white;
+				    font-size: 2em;
+				    line-height: 1.1;
+				    font-weight: 400;
+				}
+				a {
+					margin-top: 2em;
+				    font-size: .5em;
+				    display: inline-block;
+				    font-weight: 700;
+				    text-transform: uppercase;
+				    @include transition(0.5s);
+				}
+			}
+			&.col_2,
+			&.col_3 {
+				a {
+					border-color: $brand-black;
+				    color: $brand-black;
+				    margin-top: 2em;
+				    line-height: 1.1em;
+				    font-size: 0.35em;
+				    font-weight: 900;
+				    text-transform: uppercase;
+				    font-family: 'League Spartan Bold';
+				    padding: 15px 25px 12px 25px !important;
+				    text-decoration: none;
+				    @include transition(0.5s);
+				}
+			}
+			&.col_2 {
+				p {
+					text-align: center;
+				    margin: 80px;
+				    font-size: 1.6em;
+				    font-weight: 400;
+				    line-height: 1.1;
+				    color: $brand-black;
+				    font-family: 'Montserrat', sans-serif;
+				}
+			}
+			&.col_3 {
+				.row {
+					height: 371px;
+					p {
+						text-align: center;
+					    font-size: 1.6em;
+					    font-weight: 400;
+					    line-height: 1.1;
+					    color: $brand-black;
+					    font-family: Montserrat,sans-serif;
+					    margin-top: 12vh;
+					    width: 100%;
+					}
+					&:nth-last-child(1) {
+						p {
+							color: $brand-white;
+						}
+						a {
+							border-color: $brand-white;
+						    color: $brand-white;
+						    @include transition(0.5s);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.overview {
+	margin: 5em 0px;
+	text-align: center;
+	h1 {
+		color: $brand-black;
+	}
+	h4 {
+		color: #707070;
+	}
+}
+
+.three-white-col {
+	margin: 5em 0px;
+	h3 {
+		font-family: 'League Spartan Bold';
+    	color: #000;
+	}
+	p {
+		color: #707070;
+	}
+}
+
+.fullimage, .halfimage {
+	margin-bottom: 0.8em;
+}
+.fullimage {
+	&:nth-last-child(1) {
+		padding-bottom: 5em;
+	}
+}
+
+.footer-projects {
+	background-color: $brand-white;
+    font-family: Montserrat Light,arial;
+    color: #272f34;
+    margin: 6em 0;
+    float: left;
+    width: 100%;
+    .content {
+    	height: 300px;
+	    background: #dedede;
+	    display: block;
+	    text-align: center;
+	    padding-top: 6em;
+	    h4 {
+	    	font-weight: bold;
+	    	font-family: Montserrat Light,arial;
+	    }
+	    .btn {
+		    border: 2px solid $brand-black;
+		    color: #000;
+		    margin-top: 2em;
+		    line-height: 1.1em;
+		    font-size: .6em;
+		    font-weight: 900;
+		    text-transform: uppercase;
+		    font-family: 'League Spartan Bold';
+		    padding: 15px 25px 12px!important;
+		    text-decoration: none;
+		    -webkit-transition: .5s;
+		    transition: .5s;
+		   	border-radius: 0rem;
+		    &:hover {
+		    	background-color: #fff;
+			    text-decoration: none;
+		    }
+	    }
+    } 
+    h2 {
+    	font-family: 'League Spartan Bold';
+	    color: #000;
+	    text-align: center;
+	    margin-bottom: 2em;
+    }
+}

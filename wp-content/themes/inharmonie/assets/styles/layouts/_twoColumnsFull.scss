@@ -1,0 +1,139 @@
+/* Two Column Full Template*/
+.twoColsFull {
+	overflow: hidden;
+   	color: $brand-grey-light;
+   	ul {
+		list-style-type: none;
+	    padding-left: 0;
+	    margin-bottom: 0;
+	}
+   	.left, .right {
+   		padding: 50px 15px;
+   		ul > li,
+   		table,
+   		p {
+   			position: relative;
+   		}
+   		ul > li {
+   			img {
+   				border-radius: 100%;
+   			}
+   			h1, h2, h3, h4, h5, h6 {
+   				padding-bottom: 0px;
+   			}
+   			&.col-sm-3 {
+   				padding-left: 0px;
+   				@media (max-width: 543px) {
+   					padding-right: 0px;
+   					padding-bottom: 15px;
+   				}
+   			}
+   			&.col-sm-8 {
+   				@media (max-width: 543px) {
+   					padding:0px;
+   				}
+   			}
+   		}
+   		table > tbody > tr > td {
+   			border: none;
+   			padding: 5px;
+   			&.days {
+	   			color: #fff;
+	    		font-weight: 600;
+	    		padding-left: 0;
+	    	}
+   		}
+   	}
+	.left{
+		&:before {
+		  	content: '';
+		  	position: absolute;
+		  	height: 100%;
+		  	width: 100vw;
+		  	top: 0;
+		  	right: 0;
+		  	background: #002a43;
+		}
+	}
+	.right {
+		padding-left: 8.3333333333%;
+		&:before {
+		  	content: '';
+		  	position: absolute;
+		  	height: 100%;
+		  	width: 100vw;
+		  	top: 0;
+		  	left: 0;
+		  	background: #002033;
+		}
+		@media (max-width: 767px) { 
+			padding-left: 15px;
+		}
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: $brand-white;
+		position: relative;
+    	padding-bottom: 50px;
+		span {
+			position: absolute;
+		    height: 6px;
+		    width: 50px;
+		    background: #00baff;
+		    left: 0;
+		    bottom: 25px;
+		}
+	}
+}
+
+.column_6_full_width {
+	.left,
+	.right {
+		@media (min-width: 1367px){
+	        min-height: 500px !important;
+	        height: 500px !important;
+	    }
+	    @media (max-width: 1366px){
+	        min-height: 450px !important;
+	        height: 450px !important;
+	    }
+	    @media (max-width: 991px) { 
+	    	min-height: 350px !important;
+	        height: 350px !important;
+	    }
+	    @media (max-width: 543px) {
+	        min-height: 400px !important;
+	        height: 400px !important;
+	    }
+	}
+
+	.left {}
+	.right {}
+
+	.content {
+		position: absolute;
+	    top: 50%;
+	    left: 100px;
+	    width: 300px;
+	    -webkit-transform: translateX(0%) translateY(-50%);
+	    transform: translateX(0%) translateY(-50%);
+	    text-align: left;
+	    color: #fff;
+	    .second-heading {
+	    	@extend .second-heading;
+	    	color: #fff;
+	    }
+	    .second-heading-sub {
+	    	@extend .second-heading-sub;
+	    	color: #fff;
+	    	margin-bottom: 25px;
+	    }
+	    @media (max-width: 991px) { 
+	    	left: 60px;
+	    	width: 300px;
+	    }
+	    @media (max-width: 767px) { 
+	    	width: 75%;
+    		left: 40px;
+	    }
+	}
+}

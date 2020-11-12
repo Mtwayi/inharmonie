@@ -1,0 +1,39 @@
+/* Two Column Right Third Template*/
+.twoColRightThird {
+	transition: all 0.5s ease;
+	padding-bottom: 50px;
+	color: $brand-grey-light;
+	h1, h2, h3, h4, h5, h6 {
+		color: $brand-primary;
+		margin-bottom: 20px;
+	}
+	h5, h6 {
+		font-weight: 700;
+	}
+	.left {
+		transition: all 0.5s ease;
+		@extend .col-lg-9;
+    	@extend .col-md-8;
+    	@extend .col-sm-8;
+    	@extend .col-xs-12;
+    	padding-right: 50px;
+    	@media (max-width: 543px) {
+    		padding-right: 15px;
+    	}
+	}
+	.right {
+		transition: all 0.5s ease;
+		@extend .col-lg-3;
+    	@extend .col-md-4;
+    	@extend .col-sm-4;
+    	@extend .col-xs-12;
+
+    	border-left: 2px solid #ebebeb;
+    	padding-left: 50px;
+    	@media (max-width: 543px) {
+    		border-left: none;
+    		padding-left: 15px;
+    		padding-top: 25px;
+    	}
+	}
+}

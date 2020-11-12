@@ -1,0 +1,223 @@
+/* Main Banner*/
+
+#banner {
+	@media (min-width: 1367px){
+        min-height: 500px !important;
+        height: 500px !important;
+        background-position: top right !important;
+    }
+    @media (max-width: 1366px){
+        min-height: 450px !important;
+        height: 450px !important;
+       	.thumb {
+        	height: 450px !important;
+        	min-height: 450px !important;
+        	margin-top: 0px !important;
+        }
+    }
+    @media (max-width: 543px) {
+        min-height: 400px !important;
+        width: auto !important;
+        height: 400px !important;
+        margin: 0px !important;
+        .thumb {
+        	height: 400px !important;
+        	min-height: 400px !important;
+            margin-top: 0px !important;
+        }
+    }
+    .container {
+    	height: 100%;
+    	.content {
+			position: relative;
+			height: 100%;
+			section {
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    transform: translateX(-50%) translateY(-50%);
+			    width: 100%;
+    			text-align: left;
+			    color: #fff;
+			}
+			.header {
+				font-family: 'Open Sans', sans-serif;
+				float: left;
+				// text-transform: lowercase;
+				line-height: 1.2;
+	    		width: 100%;
+	    		font-weight: 300;
+	    		margin: 0rem 0 1rem 0;
+			}
+			.description {
+				font-family: 'Playfair Display', serif;
+			    float: left;
+	    		width: 520px;
+	    		margin: 0 0 1.5rem;
+			    line-height: 1;
+			    font-weight: 400;
+			    font-style: italic;
+			    clear: both;
+			    @media (max-width: 564px) {
+			    	width: 100%;
+			    }
+			}
+			.description_two {
+				float: left;
+			    width: 512px;
+			    margin: 0 0 1.5rem;
+			    line-height: 1.4;
+			    clear: both;
+			    @media (max-width: 564px) {
+			    	width: 100%;
+			    }
+			}
+			p {
+			    display: inline-block;
+			    margin: 0px;
+			}
+			@media (min-width: 1367px) {
+				color: $brand-white;
+				.header {
+				    font-size: 4.2rem;
+				    line-height: 1.2;
+				}
+				.description {
+		    		font-size: 25px;
+				}
+				p {
+					width: 100%;
+		    		font-family: 'Montserrat', sans-serif;
+		    		font-size: 38px;
+					line-height: 1;
+					color: $brand-white;
+		    		a {
+		    			color: $brand-white;
+		    			text-decoration: none;
+		    			font-family: Montserrat,sans-serif;
+		    		}
+				}
+				.breadcrumbs {
+					font-size: 28px;
+					margin-bottom: .5rem;
+				    font-family: inherit;
+				    font-weight: 500;
+				    line-height: 1.1;
+				    color: inherit;
+				    font-family: 'Montserrat', sans-serif;
+				    background: transparent;
+				    padding: 0;
+				    a {
+		    			color: $brand-white;
+		    			font-family: Montserrat,sans-serif;
+		    			text-decoration: none;
+		    		}
+				}
+				.link {
+					color: $brand-white;
+					text-decoration: none;
+				}
+				
+		    }
+		    @media (max-width: 1366px) {
+		    	section {
+		    		padding-left: 15px;
+    				padding-right: 15px;
+		    	}
+				.header {
+					font-size: 5.5vw;
+				}
+				.description {
+		    		font-size: 19px;
+		    		line-height: 1.3;
+				}
+				p {
+					width: 100%;
+		    		font-family: 'Montserrat', sans-serif;
+		    		font-size: 32px !important;
+	    			line-height: 1.1 !important;
+					color: $brand-white;
+					&:nth-child(1) {
+						margin-top: 0px;
+					}
+		    		a {
+		    			color: $brand-white;
+		    			text-decoration: none;
+		    			font-family: Montserrat,sans-serif;
+		    		}
+				}
+				.breadcrumbs {
+					font-size: 28px;
+					margin-bottom: .5rem;
+				    font-family: inherit;
+				    font-weight: 500;
+				    line-height: 1.1;
+				    color: inherit;
+				    font-family: 'Montserrat', sans-serif;
+				    background: transparent;
+				    padding: 0;
+				    a {
+		    			color: $brand-white;
+		    			font-family: Montserrat,sans-serif;
+		    			text-decoration: none;
+		    		}
+				}
+				.link {
+					color: $brand-white;
+					text-decoration: none;
+				}
+		    }
+		    @media (max-width: 767px) {
+		    	.header {
+					font-size: 48px !important;
+					margin: 0 0 1rem !important;
+				}
+				.description {
+		    		font-size: 22px;
+				}
+				p {
+					&:nth-child(1) {
+						font-size: 28px !important;
+					}
+				}
+				.breadcrumbs {
+					font-size: 20px;
+				}
+		    }
+		    @media (max-width: 543px) {
+				.header {
+					font-size: 34px !important;
+					margin: 0 0 1rem !important;
+				}
+				.description {
+		    		font-size: 20px;
+				}
+				p {
+					&:nth-child(1) {
+						font-size: 24px !important;
+					}
+				}
+				.breadcrumbs {
+					font-size: 22px;
+				}
+				.link {
+					color: $brand-white;
+					text-decoration: none;
+				}
+		    }
+		}
+    }
+    &.video {
+    	h1 {
+    		font-size: 50px;
+    	}
+    	.play {
+    		cursor: pointer;
+    		&:hover {
+    			opacity: .7;
+    			-webkit-transition: 0.5s;
+                transition: 0.5s;
+    		}
+    	}
+    }
+}

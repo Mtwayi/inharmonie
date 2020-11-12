@@ -1,0 +1,146 @@
+body {
+  	&.page {
+  		&.privacy-policy {
+  			header.navbar {
+  				background-color: #abc526;
+  			}
+		    .privacy {
+		      background-color: #ffffff;
+		      float: left;
+		      width: 100%;
+		      padding: 10em 0 4em 0;
+		      @media (max-width: 767px) {
+		      	padding-top: 7em;
+		      }
+		    }
+		}
+		&.privacy-policy {
+			h1 {
+				padding-bottom: 25px;
+				font-size: 4rem;
+			}
+			h2 {
+				font-size: 2.5rem;
+			}
+			h3 {
+				font-size: 2rem;
+			}
+			h4 {
+				font-size: 1.5rem;
+			}
+			h1, h2, h3, h4, strong {
+				padding-bottom: 15px;
+    			padding-top: 15px;
+    			margin-bottom: 0px;
+				font-family: League Spartan Bold;
+				color: #000;
+			}
+			p, ol {
+				padding-bottom: 20px;
+				margin-bottom: 0px;
+			}
+			ol {
+				margin-top: -15px;
+			}
+		}
+  	}
+  	&.search {
+  		header.navbar {
+			background-color: #abc526;
+		}
+		.content-sidebar-page {
+	      	padding: 1em 0 0em;
+	      	.listings {
+	      		article {
+	      			h2 {
+	      				font-size: 20px;
+					    color: #363636;
+					    line-height: 1.2;
+					    font-family: Open Sans,sans-serif;
+					    font-weight: 600;
+					    &:hover {
+					    	a {
+					    		color: #abc526;
+					    		text-decoration: none;
+					    	}
+					    }
+	      			}
+	      		}
+	      		.navigation {
+	      			.nav-links {
+	      				.nav-previous {
+	      					float: left;
+	      					a {
+	      						background-color: #000;
+							    padding: 10px 20px 10px 40px;
+							    color: #fff;
+							    line-height: 1;
+							    font-size: 16px;
+							    position: relative;
+							    &:before {
+							    	position: absolute;
+								    top: 10px;
+								    left: 10px;
+								    display: block;
+								    content: "";
+								    width: 20px;
+								    height: 20px;
+								    background: transparent url(../images/icon-chevron-left.png) no-repeat;
+								    background-position: 100% 100%;
+    								background-size: 82%;
+								    -webkit-transition: all .6s;
+								    transition: all .6s;
+							    }
+	      					}
+	      				}
+	      				.nav-next {
+	      					float: right;
+	      					a {
+	      						background-color: #000;
+							    padding: 10px 40px 10px 20px;
+							    color: #fff;
+							    line-height: 1;
+							    font-size: 16px;
+							    position: relative;
+							    &:after {
+							    	position: absolute;
+								    top: 10px;
+								    right: 10px;
+								    display: block;
+								    content: "";
+								    width: 20px;
+								    height: 20px;
+								    background: transparent url(../images/icon-chevron-right.png) no-repeat;
+								    background-position: 100% 100%;
+    								background-size: 82%;
+								    -webkit-transition: all .6s;
+								    transition: all .6s;
+			    				}
+	      					}
+	      				}
+	      			}
+	      		}
+	      	}
+	      	h1 {
+	      		color: #464646;
+			    font-family: Open Sans,sans-serif;
+			    font-weight: 100;
+			    font-size: 40px;
+			    line-height: 1.2;
+			    margin-bottom: 10px;
+	      	}
+	      	@media (max-width: 767px) {
+	      		padding-top: 4em;
+	      	}
+		}
+  	}
+  	&.error404 {
+  		header.navbar {
+			background-color: #abc526;
+		}
+		.content-sidebar-page {
+	      	padding: 6.5em 0 0em;
+	    }
+	}
+
+}

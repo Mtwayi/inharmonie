@@ -1,0 +1,30 @@
+/* Four Column Template*/
+#four-Column {
+	padding: 40px 0 70px 0;
+	text-align: center;
+	.header {
+		text-align: center;
+	    padding-top: 20px;
+	    padding-bottom: 40px;
+	}
+	.articles {
+		.title {
+			padding: 15px 0 0px 0;
+	    	font-weight: 700;
+		}
+		.excerpt {
+			line-height: 20px;
+			color: $brand-grey-light;
+		}
+		img.wp-post-image {
+			max-width: 100px;
+			height: auto;
+		}
+		@media (max-width: 543px) { 
+			padding-bottom: 40px;
+		}
+	}
+	&.latest-news {
+
+	}
+}

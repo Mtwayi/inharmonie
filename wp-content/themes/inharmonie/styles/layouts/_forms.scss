@@ -1,0 +1,351 @@
+/* Appoinment Form Template*/
+.form {
+	&.appointment {
+		.content {
+			width: 100%;
+			.header, .sub-header {
+				text-align: center;
+			}
+			.gform_wrapper {
+				form {
+					.gform_body {
+						ul > li {
+							clear: none;
+							&.field_description_below {
+								&:not(.gfield_contains_required) {
+									@media (max-width: 767px) {
+										clear: both;
+									}
+								}
+							}
+							input,
+							select,
+							textarea {
+								margin-top: .75em;
+								width: 100% !important;
+							    font-weight: 400;
+							    font-size: 14px;
+							    padding: 12px 20px;
+							    border: 1px solid #ebebeb;
+							    border-radius: 5px;
+							    color: #8a8a8a;
+							    &::-webkit-input-placeholder,
+							    &:-moz-placeholder,
+							    &::-moz-placeholder,
+							    &:-ms-input-placeholder {
+								   color: #8a8a8a;
+								}
+								transition: all 0.5s ease;
+								@media (max-width: 543px) {
+									padding: 12px 10px;
+								}
+							}
+
+							.gfield_date_dropdown_day,
+							.gfield_date_dropdown_month {
+								padding: 0 15px 0 0;
+	    						margin-right: 0;
+	    						@extend .col-lg-3;
+						    	@extend .col-md-3;
+						    	@extend .col-sm-3;
+						    	@extend .col-xs-4;
+							}
+							.gfield_date_dropdown_year {
+								margin-right: 0;
+	    						padding-right: 0;
+	    						@extend .col-lg-6;
+						    	@extend .col-md-6;
+						    	@extend .col-sm-6;
+						    	@extend .col-xs-4;
+							}
+							@media (max-width: 767px) {
+			   					.gfield_date_dropdown_day,
+								.gfield_date_dropdown_month {
+									padding-right: 15px;
+								}
+								.gfield_date_dropdown_year {
+		    						padding-left: 15px;
+								}
+			   				}
+			   				@media (max-width: 543px) {
+								.gfield_date_dropdown_year {
+		    						padding-left: 0px;
+								}
+			   				}
+							@media (max-width: 543px) {
+								&.col-sm-6,
+								&.col-sm-12 {
+									padding-left: 0;
+									padding-right: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+			.gform_confirmation_wrapper  {
+				text-align: center;
+			    font-size: 30px;
+			    color: $brand-aqua;
+			    font-weight: 500;
+			    line-height: 35px;
+			    border: 1px solid $brand-aqua;
+			    border-left: none;
+			    border-right: none;
+			    padding: 20px;
+			    margin-top: 30px;
+			}
+			.gform_validation_error {
+				form {
+					.gform_body {
+						ul > li {
+							&.gfield_error {
+								.ginput_container {
+									margin-top: .375em;
+									width: auto;
+									.ginput_container {
+										margin-top: 0;
+										width: 25%;
+										&.gfield_date_dropdown_year {
+											width: 50%;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.appointment,
+	&.contactUs {
+		padding: 60px 0;
+		.left {
+			// @extend .offset-lg-1;
+			// @extend .offset-md-1;
+			@extend .col-lg-6;
+    	@extend .col-md-6;
+    	@extend .col-sm-12;
+    	@extend .col-xs-12;
+    	@media (min-width: 768px) {
+    		padding-right: 30px;
+    	}
+    	@media (max-width: 767px) {
+			margin-bottom: 30px;
+		    padding-bottom: 30px;
+		    border-bottom: 2px solid #ebebeb;
+			}
+		}
+		.right {
+			// @extend .offset-lg-1;
+			// @extend .offset-md-1;
+			@extend .col-lg-6;
+    	@extend .col-md-6;
+    	@extend .col-sm-12;
+    	@extend .col-xs-12;
+		}
+		.content {
+			h2, h6 {
+				margin-bottom: 15px;
+			}
+			p {
+				font-family: 'Montserrat Light', arial;
+				color: $brand-black;
+    			font-size: 14px;
+				margin-left: 40px;
+				margin-bottom: 30px;
+			}
+			h6 {
+				color: $brand-black;
+			    line-height: 20px;
+			    position: relative;
+			    margin-left: 40px;
+			    margin-bottom: 5px;
+				font-family: 'League Spartan Bold';
+    			font-size: 14px;
+			    &.address, &.phone, &.email {
+			    	&:after {
+					   	position: absolute;
+					    top: 0;
+					    left: -40px;
+					    display: block;
+					    content: "";
+					    width: 22px;
+					    height: 27px;
+					    background: transparent url(../images/contact-icons.png) no-repeat;
+    					background-position: 0 0;
+					}
+			    }
+			    &.phone {
+			    	&:after {
+			    		background-position: 0 -44px;
+			    	}
+			    }
+			    &.email {
+			    	&:after {
+			    		background-position: 0 -82px;
+			    	}
+			    }
+			}
+			h2 {
+				font-family: 'League Spartan Bold';
+				font-weight: 700;
+    			color: $brand-black;
+    			position: relative;
+			    padding-bottom: 25px;
+			    span {
+			    	position: absolute;
+				    height: 6px;
+				    width: 50px;
+				    background: #00baff;
+				    left: 0;
+				    bottom: 5px;
+			    }
+			}
+			.gform_wrapper {
+				max-width: 100%;
+				margin: 0;
+				form {
+					.validation_error {
+						/* Error Styling */
+						width: 100%;
+					    margin-top: 1.5em;
+					    margin-bottom: 1em;
+					    text-align: center;
+					    color: #c5cd13;
+					    border-color: #c5cd13;
+					}
+					.gform_body {
+						ul > li {
+							margin: 0;
+						    padding: 0;
+						    width: 100%;
+						    max-width: 100%;
+							.ginput_container {
+								input,
+								select,
+								textarea {
+									width: 100%;
+									font-weight: 400;
+								    font-size: 14px;
+								    padding: 12px 20px;
+								    border: 1px solid #ebebeb;
+								    background-color: #ebebeb;
+								    border-radius: 5px;
+								    color: #8a8a8a;
+								    margin: 0 0 1.2em 0 !important;
+								    &::-webkit-input-placeholder,
+								    &:-moz-placeholder,
+								    &::-moz-placeholder,
+								    &:-ms-input-placeholder {
+									   color: #8a8a8a;
+									}
+								}
+								textarea {
+									margin-top: 10px;
+								}
+							}
+							/* Error Styling */
+							&.gfield_error {
+								background-color: transparent;
+							    margin-top: 0!important;
+	    						margin-bottom: 0!important;
+							    border: none;
+							    .ginput_container {
+							    	margin: 0;
+							    	max-width: 100%;
+							    	input.button, input[type=text], input[type=image], input[type=submit] {
+							    		margin-bottom: 0px !important;
+							    	}
+							    }
+							    .gfield_description.validation_message  {
+							    	max-width: 100%;
+	    							padding: 0px !important;
+	    						    margin: 0 0 5px 25px;
+	    						    color: #c5cd13;
+							    }
+							}
+						}
+					}
+					.gform_footer {
+						text-align: left;
+					    padding-top: 20px;
+						input.button, input[type=image], input[type=submit] {
+							display: inline-block;
+						    font-weight: 500;
+						    text-align: center;
+						    white-space: nowrap;
+						    vertical-align: middle;
+						    cursor: pointer;
+						    -webkit-user-select: none;
+						    -moz-user-select: none;
+						    -ms-user-select: none;
+						    user-select: none;
+						    border: none;
+						    padding: 12px 50px;
+						    font-size: 18px;
+						    background: $brand-black;
+						    color: $brand-white;
+						    text-transform: uppercase;
+						    border-radius: 0px;
+						    transition: all 0.5s ease;
+						    &:hover,
+						    &:focus {
+						    	background:#818181;
+						    	color: $brand-black;
+						    }
+						}
+					}
+				}
+			}
+		}
+	}
+	&.thankyou {
+		.left {
+			.content {
+				text-align: center;
+				.head {
+					color: #000;
+					margin-bottom: 15px;
+					margin-top: 20px;
+					font-family: 'League Spartan Bold';
+					font-size: 20px;
+				}
+				.header {
+					margin-bottom: 0px;
+				}
+				p {
+					margin-left: 0px;
+					margin-bottom: 15px;
+				}
+				.firstP {
+				    font-weight: 400;
+				    font-size: 24px;
+				    padding-bottom: 30px;
+				    display: block;
+				}
+				.secondP,
+				.bellowBtn {
+					font-size: 18px;
+    				font-family: League Spartan Bold;
+				}
+				.tel{
+				    color: $brand-black;
+    				font-weight: 700;
+				}
+				.btn-green, .btn-blue {
+					float: left;
+					width: 100%;
+					display: inline-block;
+					text-transform: uppercase;
+				    border-radius: 10px !important;
+				    font-size: 14px !important;
+				    font-weight: 500 !important;
+				    padding: 10px 25px !important;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

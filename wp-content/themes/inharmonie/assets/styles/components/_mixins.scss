@@ -1,0 +1,349 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+// BEM selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Media queries
+
+@mixin mq($break) {
+  @if $break == "iphone" {
+    @media (max-width: $brkpoint-iphone +1) {
+      @content;
+    }
+  }
+  @else if $break == "phone" {
+    @media (max-width: $brkpoint-phone + 1) {
+      @content;
+    }
+  }
+  @else if $break == "tablet" {
+    @media (max-width: $brkpoint-tablet + 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop" {
+    @media (max-width: $brkpoint-desktop + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "mq1100" {
+    @media (max-width: 1100px + 1) {
+      @content;
+    }
+  }
+
+ @else if $break == "mq1150" {
+    @media (max-width: 1150px + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "mq1200" {
+    @media (max-width: 1200px + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "mq1250" {
+    @media (max-width: 1250px + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "mq1279" {
+    @media (max-width: 1279px + 1) {
+      @content;
+    }
+  }
+
+
+  @else if $break == "mq1341" {
+    @media (max-width: 1341px + 1) {
+      @content;
+    }
+  }
+  @else if $break == "mq15inch" {
+    @media (max-width: 1366px + 1) {
+      @content;
+    }
+  }
+  @else if $break == "mq19inch" {
+    @media (max-width: 1440px + 1) {
+      @content;
+    }
+  }
+  @else if $break == "mq20inch" {
+    @media (max-width: 1600px + 1) {
+      @content;
+    }
+  }
+    @else if $break == "notebook" {
+    @media (max-width: 1650px + 1) {
+      @content;
+    }
+  }
+  @else if $break == "mq22inch" {
+    @media (max-width: 1680px + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (max-width: $brkpoint-large + 1) {
+      @content;
+    }
+  }
+  @else if $break == "xlarge" {
+    @media (max-width: $brkpoint-xlarge + 1) {
+      @content;
+    }
+  }
+  
+  @else if $break == "iphone4" {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  @else if $break == "iphone4" {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $break == "iphone5" {
+     @media only screen 
+      and (min-device-width: 320px) 
+      and (max-device-width: 568px)
+      and (-webkit-min-device-pixel-ratio: 2)
+      and (orientation: portrait){
+        @content;
+    }
+  }
+
+  @else if $break == "iphone6" {
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $break == "iphone6p" {
+  @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $break == "galaxys4" {
+  @media screen 
+    and (device-width: 360px) 
+    and (device-height: 640px) 
+    and (-webkit-device-pixel-ratio: 3) {
+      @content;
+  }
+}
+
+
+ 
+
+   @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+// Media Queries Landscape
+
+@mixin mql($break) {
+  @if $break == "iphone" {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+      @content;
+    }
+  }
+  @else if $break == "iphone5" {
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+      @content;
+    }
+  }
+
+    @else if $break == "iphone6" {
+    @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+      @content;
+    }
+  }
+
+    @else if $break == "iphone6p" {
+    @media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+      @content;
+    }
+  }
+
+    @else if $break == "ipadmini" {
+   @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1)  {
+      @content;
+    }
+  }
+
+    @else if $break == "ipad" {
+  @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px) 
+    and (orientation: landscape) 
+   {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+} 
+
+
+// Media Queries Min
+
+@mixin mqm($break) {
+  @if $break == "iphone" {
+    @media (min-width: $brkpoint-iphone +1) {
+      @content;
+    }
+  }
+  @else if $break == "galaxy" {
+    @media (min-width: $brkpoint-galaxy +1) {
+      @content;
+    }
+  }
+  @else if $break == "iphone6" {
+    @media (min-width: $brkpoint-iphone6 +1) {
+      @content;
+    }
+  }
+  @else if $break == "phone" {
+    @media (min-width: $brkpoint-phone + 1) {
+      @content;
+    }
+  }
+  @else if $break == "tablet" {
+    @media (min-width: $brkpoint-tablet + 1) {
+      @content;
+    }
+  }
+  @else if $break == "desktop" {
+    @media (min-width: $brkpoint-desktop + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "notebook" {
+    @media (max-width: 1366px + 1) {
+      @content;
+    }
+  }
+  
+  @else if $break == "large" {
+    @media (min-width: $brkpoint-large + 1) {
+      @content;
+    }
+  }
+
+  @else if $break == "mq20inch" {
+    @media (min-width: $brkpoint-mq20inch + 1) {
+      @content;
+    }
+  }
+  @else if $break == "xlarge" {
+    @media (min-width: $brkpoint-xlarge + 1) {
+      @content;
+    }
+  }
+   @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`. "
+  }
+}
+
+// Transparent Background
+@mixin alpha-attribute($attribute, $color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  #{$attribute}: $solid-color;
+  #{$attribute}: $color;
+}
+
+
+// Transition
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}

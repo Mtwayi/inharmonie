@@ -1,0 +1,195 @@
+.section.events {
+	color: $brand-white;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    h2 {
+    	font-size: 4em;
+    	font-weight: 700;
+    }
+    h4 {
+    	font-family: Playfair Display,serif;
+	    color: $brand-white;
+	    font-size: 18px;
+	    line-height: 1.2;
+	    font-weight: 500;
+	    font-style: italic;
+	    margin: 1em 0px;
+    }
+}
+
+/* Features Events Two Articles*/
+.featured-events-article {
+    display: inline-block;
+    width: 100%;
+    font-family: Montserrat,sans-serif;
+    text-align: left;
+    padding-bottom: 5em;
+    .cols {
+        @media (min-width: 768px) {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        @media (max-width: 767px) {
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid #cccccc;
+            &:nth-last-child(1) {
+                padding-bottom: 0px;
+                margin-bottom: 0px;
+                border-bottom: none;
+            }
+        }
+        .thumb {
+            img {}
+        }
+        .title,
+        .date {
+            font-size: 22px;
+            line-height: 1.2;
+            font-weight: 400;
+            margin: 20px 0;
+        }
+        .date {
+        	color: $brand-green;
+        	margin-bottom: 0px;
+        }
+        .summary {
+            font-family: Montserrat Bold,arial;
+            color: $brand-grey-light;
+            line-height: 1.3;
+            .btn {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.events-article {
+    .container.section {
+        .left-side {
+            .events {
+                background: #f0efef;
+                margin-bottom: 3em;
+                .event-details {
+                    position: relative;
+                    padding: 1.5em;
+                    font-family: Montserrat;
+                    color: #464646;
+                    font-size: 16px;
+                    .top-level {
+                        margin-bottom: 15px;
+                        padding-bottom: 7px;
+                        border-bottom: 1px solid #cccccc;
+                        h3,
+                        span {
+                            padding-bottom: 8px;
+                            display: inline-block;
+                        }
+                    }
+                    h3 {
+                        font-size: 26px;
+                    }
+                    span {
+                        color: #616161;
+                    }
+                }
+                .interested {
+                    position: relative;
+                    background: $brand-green;
+                    color: $brand-white;
+                    .content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%) translateY(-50%);
+                        transform: translateX(-50%) translateY(-50%);
+                        width: 100%;
+                        text-align: left;
+                        color: #fff;
+                        text-align: center;
+                        h4 {
+                            padding: 0;
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        display: table;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 20px 20px 20px 0px;
+                        border-color: transparent #abc526 transparent transparent;
+                        position: absolute;
+                        top: 50%;
+                        left: -10px;
+                        -webkit-transform: translateX(-50%) translateY(-50%);
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+            }
+            .about-event {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #ebebeb;
+                .title {
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    color: #000;
+                    font-size: 20px;
+                    line-height: 1.3;
+                    padding-bottom: 20px;
+                }
+                .summary {
+                    font-family: Montserrat;
+                    font-weight: 400;
+                    color: #959595;
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+            }
+            .your-speakers {
+                padding-top: 15px;
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #ebebeb;
+                .speakers {
+                    display: inline-block;
+                    width: 100%;
+                    .header {
+                        font-family: Montserrat;
+                        font-weight: 400;
+                        color: #000;
+                        font-size: 20px;
+                        line-height: 1.3;
+                        padding-bottom: 30px;
+                    }
+                    .summary {
+                        padding: 0 20px;
+                        display: inline-block;
+                        img {
+                            float: left;
+                            border-radius: 100%;
+                            margin-right: 30px;
+                        }
+                        .title {
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            color: #000;
+                            font-size: 20px;
+                            line-height: 1.3;
+                            padding-bottom: 10px;
+                        }
+                    }
+                    .slick-dots {
+                        display: none !important;
+                    }                      
+                }
+            }
+        }
+        .right-side {
+
+        }
+    }
+}
+

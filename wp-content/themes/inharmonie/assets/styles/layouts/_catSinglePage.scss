@@ -1,0 +1,86 @@
+// Use these to change the size of the map container
+#singleCatLayout,
+#CatLayout {
+	padding: 30px 0px;
+	.breadcrumbs {
+		margin-bottom: 30px;
+	}
+	.thumbnail{
+		display: inline-block;
+    	padding-bottom: 20px;
+	}
+	.archive-header {
+		border-bottom: 1px solid;
+	    padding-bottom: 15px;
+	    margin-bottom: 30px;
+	}
+	header {
+		a {
+			transition: all 0.9s ease;
+		}
+		.updated,
+		.byline {
+			display: inline-block;
+		}
+	}
+
+	.article {
+	    margin-bottom: 20px;
+	    padding-bottom: 15px;
+	    border-bottom: 1px solid;
+	}
+
+	.right-sidebar {
+		section	{
+			border: 1px solid #001928;
+			background-color: #ffffff;
+    		color: #7f7f7f;
+    		margin-bottom: 20px;
+    		&.widget_search {
+    			form {
+    				padding: 15px;
+    				label {
+    					width: 158px;
+    					input{
+    						width: 100%;
+    						border: 1px solid #00baff;
+    						border-radius: 0;
+    					}
+    				}
+    				input.search-submit {
+    					@extend .btn;
+    					@extend .btn-acqua;
+    					padding: 10px 13px!important;
+    					border-radius: 0px!important;
+    					margin-left: -5px;
+    					width: 80px;
+    					line-height: 1.2;
+    				}
+    			}
+    		}
+    		h3 {
+    			padding: 10px 15px 15px 15px;
+			    background-color: #001928;
+			    color: #ffffff;
+			    line-height: 1.75rem;
+			    margin: 0;
+    		}
+    		ul {
+    			list-style-type: none;
+			    padding: 16px;
+			    margin-bottom: 0;
+			    li {
+			    	padding-bottom: 5px;
+			    	a {
+			    		transition: all 0.3s ease;
+			    		&:hover,
+			    		&:focus {
+			    			text-decoration: none;
+			    			font-weight: bold;
+			    		}
+			    	}
+			    }
+    		}
+		}
+	}
+}
